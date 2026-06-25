@@ -1,18 +1,35 @@
 import React, { useState } from 'react';
+import { db } from '../firebase';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 const FooterForm = () => {
   const [formData, setFormData] = useState({ name: '', email: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Visual mock for now as requested
-    console.log("Waitlist submission:", formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '' });
-    }, 3000);
+    setLoading(true);
+    setError(false);
+
+    try {
+      await addDoc(collection(db, 'waitlist'), {
+        name: formData.name,
+        email: formData.email,
+        timestamp: serverTimestamp(),
+      });
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: '', email: '' });
+      }, 3000);
+    } catch (err) {
+      console.error("Firebase error:", err);
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -62,14 +79,20 @@ const FooterForm = () => {
               />
             </div>
 
+            {error && (
+              <p className="text-red-300 text-sm text-center">
+                Something went wrong. Please try again.
+              </p>
+            )}
+
             <button 
               type="submit" 
-              disabled={submitted}
+              disabled={submitted || loading}
               className={`mt-4 w-full px-5 py-3 rounded-full font-bold text-white transition-all duration-300 ${
                 submitted ? 'bg-green-500' : 'bg-accent-coral hover:bg-opacity-90'
               }`}
             >
-              {submitted ? 'JOINED!' : 'JOIN WAITLIST'}
+              {loading ? 'JOINING...' : submitted ? 'JOINED!' : 'JOIN WAITLIST'}
             </button>
 
           </form>
