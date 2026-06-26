@@ -24,8 +24,8 @@ const Features = () => {
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-dark-teal mb-6 tracking-wide leading-tight">
               EVERYTHING YOU NEED<br className="hidden lg:block"/> TO MOVE FORWARD
             </h2>
-            <p className="text-dark-teal/80 font-regular text-[15px] md:text-base leading-relaxed text-justify">
-              Found brings together personalized opportunities, proven student pathways, and meaningful connections in one place. Discover internships, research, scholarships, campus organizations, and mentors tailored to your interests—so you always know what to do next.
+            <p className="text-dark-teal/80 font-regular text-[15px] md:text-base leading-relaxed text-left">
+              Share your interests and goals, and unlock the opportunities, guidance, and connections you need to make the most of your college experience—all in one place.
             </p>
           </div>
         </div>
@@ -36,14 +36,14 @@ const Features = () => {
           <div className="bg-accent-coral/[.11] rounded-[2rem] p-8 md:p-6 lg:p-10 hover:bg-accent-coral/[.15] transition-colors duration-300">
             <h3 className="text-xl font-bold text-dark-teal mb-4">Discover</h3>
             <p className="text-dark-teal/80 font-regular text-[15px] leading-relaxed">
-              Find opportunities on campus you didn't know existed
+              Find opportunities on campus you didn't know existed.
             </p>
           </div>
 
           <div className="bg-accent-coral/[.11] rounded-[2rem] p-8 md:p-6 lg:p-10 hover:bg-accent-coral/[.15] transition-colors duration-300">
             <h3 className="text-xl font-bold text-dark-teal mb-4">People</h3>
             <p className="text-dark-teal/80 font-regular text-[15px] leading-relaxed">
-              Connect with students, alumni and peers who have walked similar paths
+              Connect with students, alumni and peers who have walked similar paths.
             </p>
           </div>
 

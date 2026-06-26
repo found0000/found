@@ -21,11 +21,30 @@ const Hero = () => {
       </div>
 
       {/* Floating Map Pins (Decorative) */}
-      {/* We use inline styles or tailwind arbitrary values for positioning these exactly as in the design */}
-      <img src={mapPin} alt="" className="absolute w-8 h-8 md:w-14 md:h-14 top-[15%] left-[5%] md:left-[10%] animate-fade-in-delayed [animation-delay:1000ms]" />
-      <img src={mapPin} alt="" className="absolute w-6 h-6 md:w-12 md:h-12 top-[10%] md:top-[15%] right-[15%] md:right-[20%] animate-fade-in-delayed [animation-delay:1200ms]" />
-      <img src={mapPin} alt="" className="absolute w-10 h-10 md:w-16 md:h-16 bottom-[5%] md:bottom-[8%] left-[2%] md:left-[5%] animate-fade-in-delayed [animation-delay:1400ms]" />
-      <img src={mapPin} alt="" className="absolute w-8 h-8 md:w-14 md:h-14 bottom-[8%] md:bottom-[10%] right-[2%] md:right-[5%] animate-fade-in-delayed [animation-delay:1600ms]" />
+      {/* Floating Map Pins (Decorative) - 14 Pins */}
+      {/* Scattered evenly across the top and bottom quarters, utilizing the full width above/below text */}
+      
+      {/* Top Left Area */}
+      <img src={mapPin} alt="" className="absolute w-10 h-10 10:w-12 md:h-12 top-[16%] left-[8%] md:top-[12%] md:left-[8%] animate-fade-in-delayed [animation-delay:1000ms] rotate-[15deg]" />
+      <img src={mapPin} alt="" className="absolute w-10 h-10 10:w-12 md:h-12 top-[35%] left-[25%] md:top-[20%] md:left-[28%] animate-fade-in-delayed [animation-delay:1200ms] -rotate-[10deg]" />
+      <img src={mapPin} alt="" className="absolute w-10 h-10 10:w-12 md:h-12 top-[22%] left-[45%] md:top-[15%] md:left-[50%] animate-fade-in-delayed [animation-delay:1400ms] rotate-[5deg]" />
+      
+      {/* Top Right Area */}
+      <img src={mapPin} alt="" className="absolute w-10 h-10 md:w-12 md:h-12 top-[32%] right-[23%] md:top-[28%] md:right-[30%] animate-fade-in-delayed [animation-delay:1800ms] -rotate-[25deg]" />
+      <img src={mapPin} alt="" className="absolute w-10 h-10 md:w-12 md:h-12 top-[18%] right-[10%] md:top-[15%] md:right-[12%] animate-fade-in-delayed [animation-delay:2000ms] rotate-[20deg]" />
+      
+      {/* Far Edges (Middle) */}
+      <img src={mapPin} alt="" className="hidden lg:block absolute w-10 h-10 md:w-12 md:h-12 top-[46%] left-[2%] md:top-[45%] md:left-[4%] animate-fade-in-delayed [animation-delay:2200ms] -rotate-[15deg]" />
+      <img src={mapPin} alt="" className="hidden lg:block absolute w-10 h-10 md:w-12 md:h-12 bottom-[48%] right-[2%] md:bottom-[50%] md:right-[4%] animate-fade-in-delayed [animation-delay:2400ms] rotate-[35deg]" />
+      
+      {/* Bottom Left Area */}
+      <img src={mapPin} alt="" className="absolute w-10 h-10 md:w-12 md:h-12 bottom-[15%] left-[8%] md:bottom-[8%] md:left-[8%] animate-fade-in-delayed [animation-delay:2600ms] -rotate-[8deg]" />
+      <img src={mapPin} alt="" className="absolute w-10 h-10 md:w-12 md:h-12 bottom-[26%] left-[25%] md:bottom-[5%] md:left-[30%] animate-fade-in-delayed [animation-delay:3000ms] rotate-[12deg]" />
+      
+      {/* Bottom Right Area */}
+      <img src={mapPin} alt="" className="absolute w-10 h-10 md:w-12 md:h-12 bottom-[28%] right-[40%] md:bottom-[11%] md:right-[48%] animate-fade-in-delayed [animation-delay:3200ms] -rotate-[18deg]" />
+      <img src={mapPin} alt="" className="absolute w-10 h-10 md:w-12 md:h-12 bottom-[12%] right-[25%] md:bottom-[4%] md:right-[28%] animate-fade-in-delayed [animation-delay:3400ms] rotate-[22deg]" />
+      <img src={mapPin} alt="" className="absolute w-10 h-10 md:w-12 md:h-12 bottom-[20%] right-[10%] md:bottom-[14%] md:right-[5%] animate-fade-in-delayed [animation-delay:3600ms] -rotate-[30deg]" />
 
     </section>
   );

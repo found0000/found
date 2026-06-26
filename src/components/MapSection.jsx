@@ -1,11 +1,11 @@
 import React from 'react';
-import networkMap from '../assets/network-map.png';
-import networkMapMobile from '../assets/network-map-mobile.png';
+import networkMap from '../assets/network-map.jpeg';
+import networkMapMobile from '../assets/network-map-mobile.jpeg';
 import starburstButton from '../assets/starburst-button.svg';
 
 const MapSection = () => {
   return (
-    <section className="w-full bg-cream py-16 relative flex items-center justify-center min-h-[600px]">
+    <section className="w-full bg-cream pb-16 pt-0 relative flex items-center justify-center min-h-[600px]">
       
       {/* Background Map Image */}
       <div className="w-full relative flex justify-center items-center">

@@ -6,17 +6,17 @@ import step4 from '../assets/step-4.png';
 
 const HowItWorks = () => {
   const steps = [
-    { num: '01', title: 'Tell Us about yourself', desc: 'Choose your major, interests and goals', img: step1 },
-    { num: '02', title: 'Discover Opportunities', desc: 'Get personalized recommendations for research, scholarships, events, clubs and more', img: step2 },
-    { num: '03', title: 'Explore pathways', desc: 'See the milestones and experiences students took to reach similar goals', img: step3 },
+    { num: '01', title: 'Tell Us about yourself', desc: 'Choose your major, interests and goals.', img: step1 },
+    { num: '02', title: 'Discover Opportunities', desc: 'Get personalized recommendations for research, scholarships, events, clubs and more.', img: step2 },
+    { num: '03', title: 'Explore pathways', desc: 'See the milestones and experiences students took to reach similar goals.', img: step3 },
     { num: '04', title: 'Take your next step', desc: 'Apply, connect and pursue opportunities that move you forward.', img: step4 },
   ];
 
   return (
-    <section className="w-full bg-cream pt-32 pb-20 md:pt-40 md:pb-24 px-6 overflow-hidden">
+    <section className="w-full bg-cream pt-16 pb-16 md:pt-32 md:pb-24 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
-        <h2 className="text-3xl md:text-5xl font-bold text-center text-dark-teal mb-20 tracking-wider">
+        <h2 className="text-3xl md:text-5xl font-bold text-center text-dark-teal mb-10 md:mb-20 tracking-wider">
           HOW FOUND WORKS
         </h2>
 
