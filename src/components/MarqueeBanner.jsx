@@ -15,7 +15,7 @@ const MarqueeBanner = () => {
   );
 
   return (
-    <section className="w-full bg-accent-coral py-4 overflow-hidden border-y border-accent-coral/20 flex">
+    <section className="w-full bg-accent-coral py-4 overflow-hidden border-y-[2.5px] border-primary-teal flex">
       {/* We need a container wider than screen to scroll smoothly without jumping.
           The best way is to have two identical text spans inside the flex container. */}
       <div className="animate-marquee flex items-center whitespace-nowrap">
