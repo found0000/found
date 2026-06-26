@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         'primary-teal': '#008081',
-        'cream': '#F6F4DF',
+        'cream': 'rgba(255, 253, 244, 1)',
         'accent-coral': '#E3735F',
         'dark-teal': '#003435',
       },

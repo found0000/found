@@ -31,17 +31,17 @@
   width: max-content;
 }
 
-/* Delayed fade-in for map pins */
-@keyframes fadeIn {
-  0% {
+/* Continuous smooth fade in/out for map pins */
+@keyframes twinkle {
+  0%, 100% {
     opacity: 0;
   }
-  100% {
+  50% {
     opacity: 1;
   }
 }
 
-.animate-fade-in-delayed {
+.animate-twinkle {
   opacity: 0;
-  animation: fadeIn 1s ease-out forwards;
+  animation: twinkle 4s ease-in-out infinite forwards;
 }
