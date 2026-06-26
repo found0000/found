@@ -92,7 +92,7 @@ const FooterForm = () => {
                 submitted ? 'bg-green-500' : 'bg-accent-coral hover:bg-opacity-90'
               }`}
             >
-              {loading ? 'JOINING...' : submitted ? 'JOINED!' : 'JOIN WAITLIST'}
+              {loading ? 'JOINING...' : submitted ? 'YOU\'RE IN!' : 'JOIN WAITLIST'}
             </button>
 
           </form>

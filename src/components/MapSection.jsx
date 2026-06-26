@@ -44,7 +44,7 @@ const MapSection = () => {
           />
           
           {/* Overlay Text and Arrow */}
-          <div className="absolute flex flex-col items-center justify-center text-white pointer-events-none gap-3">
+          <div className="absolute flex flex-col items-center justify-center text-white pointer-events-none gap-3 mt-4 md:mt-5">
             <span className="font-semibold text-lg md:text-2xl leading-tight uppercase text-center tracking-wide">
               Join<br/>Waitlist
             </span>
