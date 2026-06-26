@@ -1,5 +1,5 @@
 import React from 'react';
-import networkMap from '../assets/network-map.jpeg';
+import networkMap from '../assets/network-map.png';
 import networkMapMobile from '../assets/network-map-mobile.jpeg';
 import starburstButton from '../assets/starburst-button.svg';
 
