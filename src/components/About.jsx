@@ -23,8 +23,8 @@ const About = () => {
           <div className="bg-primary-teal text-white rounded-xl md:rounded-2xl px-6 py-3 md:px-10 md:py-5 mb-6 md:mb-8 inline-block shadow-sm">
             <h2 className="text-2xl lg:text-4xl font-semibold tracking-[0.1em]">WHAT IS FOUND ?</h2>
           </div>
-          <p className="text-sm md:text-base lg:text-xl font-regular leading-relaxed max-w-[320px] md:max-w-[450px] text-dark-teal/80 text-left">
-            We bring opportunities, pathways, and student insights together in one place—so you can spend less time searching and more time moving forward.
+          <p className="text-sm md:text-base lg:text-xl font-regular leading-relaxed max-w-[320px] md:max-w-[470px] text-dark-teal/80 text-left">
+            We believe that the best opportunities shouldn't be hidden. So we're building a better way to discover opportunities, learn from students who have already been where you’re at, and navigate college with confidence.
           </p>
         </div>
 
