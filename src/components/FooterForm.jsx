@@ -51,9 +51,15 @@ const FooterForm = () => {
           <p className="text-white/90 font-medium mb-4">
             Found is launching at Penn State!
           </p>
-          <p className="text-white/70 text-sm max-w-sm leading-relaxed">
+          <p className="text-white/70 text-sm max-w-sm leading-relaxed mb-8">
             Join the waitlist to be among the first to experience the platform.
           </p>
+          <a 
+            href="mailto:"
+            className="inline-block px-8 py-3 border-2 border-white/20 text-white font-bold rounded-full hover:bg-white/10 hover:border-white/40 transition-all duration-300 tracking-wide text-sm"
+          >
+            CONTACT US
+          </a>
         </div>
 
         {/* Right Side: Form */}

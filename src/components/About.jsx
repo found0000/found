@@ -24,7 +24,7 @@ const About = () => {
             <h2 className="text-2xl lg:text-4xl font-semibold tracking-[0.1em]">WHAT IS FOUND ?</h2>
           </div>
           <p className="text-sm md:text-base lg:text-xl font-regular leading-relaxed max-w-[320px] md:max-w-[470px] text-dark-teal/80 text-left">
-            We believe that the best opportunities shouldn't be hidden. So we're building a better way to discover opportunities, learn from students who have already been where you’re at, and navigate college with confidence.
+            We believe the best opportunities on your campus shouldn't be hidden. That’s why we’re building a better way to discover campus-specific opportunities, learn from students who’ve been where you are, and navigate college with confidence.
           </p>
         </div>
 
