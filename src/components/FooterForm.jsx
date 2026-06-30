@@ -5,6 +5,7 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 const FooterForm = () => {
   const [formData, setFormData] = useState({ 
     name: '', 
+    year: '',
     email: '',
     interest: '',
     otherInterest: ''
@@ -13,6 +14,7 @@ const FooterForm = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [yearDropdownOpen, setYearDropdownOpen] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,6 +24,7 @@ const FooterForm = () => {
     try {
       await addDoc(collection(db, 'waitlist'), {
         name: formData.name,
+        year: formData.year,
         email: formData.email,
         interest: formData.interest === 'Other' ? formData.otherInterest : formData.interest,
         timestamp: serverTimestamp(),
@@ -29,7 +32,7 @@ const FooterForm = () => {
       setSubmitted(true);
       setTimeout(() => {
         setSubmitted(false);
-        setFormData({ name: '', email: '', interest: '', otherInterest: '' });
+        setFormData({ name: '', year: '', email: '', interest: '', otherInterest: '' });
       }, 3000);
     } catch (err) {
       console.error("Firebase error:", err);
@@ -77,6 +80,55 @@ const FooterForm = () => {
                 value={formData.name}
                 onChange={(e) => setFormData({...formData, name: e.target.value})}
               />
+            </div>
+
+            <div className="flex flex-col gap-1 relative">
+              <label htmlFor="year" className="text-white text-xs font-semibold pl-2">YEAR</label>
+              
+              {/* Custom Dropdown Trigger */}
+              <div 
+                className={`w-full px-5 py-3 rounded-full bg-cream font-medium flex justify-between items-center cursor-pointer border-2 transition-colors ${
+                  yearDropdownOpen ? 'border-accent-coral' : 'border-transparent'
+                } ${
+                  formData.year === '' ? 'text-gray-400' : 'text-dark-teal'
+                }`}
+                onClick={() => setYearDropdownOpen(!yearDropdownOpen)}
+              >
+                <span>
+                  {formData.year === '' ? 'Select...' : formData.year}
+                </span>
+                <svg className={`w-5 h-5 text-dark-teal/50 transition-transform duration-200 ${yearDropdownOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+
+              {/* Hidden input to keep native form 'required' validation working */}
+              <input 
+                type="text" 
+                required 
+                value={formData.year} 
+                onChange={() => {}} 
+                className="opacity-0 absolute pointer-events-none w-0 h-0 bottom-0 left-1/2" 
+                tabIndex={-1}
+              />
+
+              {/* Custom Dropdown Menu */}
+              {yearDropdownOpen && (
+                <div className="absolute top-[105%] left-0 right-0 mt-1 bg-cream rounded-2xl shadow-xl overflow-y-auto max-h-52 z-30 border border-primary-teal/20 py-2 animate-fade-in custom-scrollbar">
+                  {['Freshman', 'Sophomore', 'Junior', 'Senior', 'Grad'].map((option) => (
+                    <div 
+                      key={option}
+                      className="px-5 py-2.5 text-dark-teal font-medium hover:bg-primary-teal hover:text-white cursor-pointer transition-colors"
+                      onClick={() => {
+                        setFormData({...formData, year: option});
+                        setYearDropdownOpen(false);
+                      }}
+                    >
+                      {option}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="flex flex-col gap-1">
