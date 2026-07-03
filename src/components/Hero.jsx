@@ -74,7 +74,7 @@ const Hero = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-teal leading-tight tracking-tight">
             Your personalized guide to opportunities on campus
           </h1>
-          <p className="text-lg md:text-xl text-primary-teal/90 font-medium leading-relaxed max-w-lg">
+          <p className="text-base md:text-lg text-dark-teal/80 font-medium leading-relaxed max-w-lg">
             Found helps you uncover the opportunities that match your interests, goals and ambitions - all in one place.
           </p>
         </div>
