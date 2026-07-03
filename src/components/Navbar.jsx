@@ -19,7 +19,7 @@ const Navbar = () => {
       </div>
       
       <button 
-        className="bg-white text-primary-teal px-6 py-2 rounded-full font-semibold text-sm hover:bg-cream transition-colors"
+        className="bg-accent-coral text-white px-6 py-2 rounded-full font-semibold text-sm hover:bg-cream transition-colors"
         onClick={() => document.getElementById('waitlist-form')?.scrollIntoView({ behavior: 'smooth' })}
       >
         JOIN WAITLIST

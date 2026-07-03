@@ -14,7 +14,7 @@ function App() {
     <div className="w-full min-h-screen">
       <Navbar />
       <Hero />
-      <MapSection />
+      {/* <MapSection /> */}
       <About />
       <MarqueeBanner />
       <HowItWorks />
