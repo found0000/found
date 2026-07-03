@@ -25,7 +25,7 @@ const Features = () => {
               EVERYTHING YOU NEED<br className="hidden lg:block"/> TO MOVE FORWARD
             </h2>
             <p className="text-dark-teal/80 font-regular text-[15px] md:text-base leading-relaxed text-left">
-              Share your interests and goals, and unlock the opportunities, guidance, and connections you need to make the most of your college experience—all in one place.
+              Share your interests and goals, and unlock the opportunities you need to make the most of your college experience—all in one place.
             </p>
           </div>
         </div>

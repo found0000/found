@@ -72,7 +72,7 @@ const Hero = () => {
         {/* Right Column: Text Content */}
         <div className="w-full md:w-[45%] lg:w-[40%] flex flex-col items-center md:items-start text-center md:text-left gap-6 md:gap-8">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-teal leading-tight tracking-tight">
-            Your personalized guide to opportunities on campus
+            Your <span className="italic">personalized</span> guide to opportunities on campus
           </h1>
           <p className="text-base md:text-lg text-dark-teal/80 font-medium leading-relaxed max-w-lg">
             Found helps you uncover the opportunities that match your interests, goals and ambitions - all in one place.

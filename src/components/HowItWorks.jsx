@@ -8,8 +8,7 @@ const HowItWorks = () => {
   const steps = [
     { num: '01', title: 'Tell Us about yourself', desc: 'Choose your major, interests and goals.', img: step1 },
     { num: '02', title: 'Discover Opportunities', desc: 'Get personalized recommendations for research, scholarships, events, clubs and more.', img: step2 },
-    { num: '03', title: 'Explore pathways', desc: 'See the milestones and experiences students took to reach similar goals.', img: step3 },
-    { num: '04', title: 'Take your next step', desc: 'Apply, connect and pursue opportunities that move you forward.', img: step4 },
+    { num: '03', title: 'Take your next step', desc: 'Apply, connect and pursue opportunities that move you forward.', img: step4 },
   ];
 
   return (
@@ -17,7 +16,7 @@ const HowItWorks = () => {
       <div className="max-w-7xl mx-auto">
         
         <h2 className="text-3xl md:text-5xl font-bold text-center text-dark-teal mb-10 md:mb-20 tracking-wider">
-          HOW FOUND WORKS
+          HOW IT WORKS
         </h2>
 
         {/* Desktop Row / Tablet Grid / Mobile Column */}

@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary-teal': '#00A3A3', // Brighter, more vibrant teal (was #008081)
+        'primary-teal': '#00A3A3',
         'cream': '#FDFDF5',
-        'accent-coral': '#ff6c56ff', // Brighter, punchier coral (was #E3735F)
+        'accent-coral': '#ff6c56ff',
         'dark-teal': '#003435',
       },
       fontFamily: {
