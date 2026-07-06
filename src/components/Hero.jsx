@@ -7,7 +7,7 @@ import starburstButton from '../assets/starburst-button.svg';
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen bg-cream flex items-center justify-center overflow-hidden pt-28 pb-20">
+    <section className="relative w-full bg-cream flex items-center justify-center overflow-hidden pt-32 pb-12 lg:pt-40 lg:pb-16">
       
       <div className="w-full max-w-[90rem] mx-auto px-8 md:px-16 lg:px-24 flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16 z-10">
         
