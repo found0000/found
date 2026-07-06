@@ -12,7 +12,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="w-full bg-cream pt-16 pb-16 md:pt-32 md:pb-24 px-6 overflow-hidden">
+    <section id="how-it-works" className="w-full bg-cream pt-16 pb-16 md:pt-32 md:pb-24 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
         <h2 className="text-3xl md:text-5xl font-bold text-center text-dark-teal mb-10 md:mb-20 tracking-wider">

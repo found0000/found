@@ -25,31 +25,31 @@ const Features = () => {
               EVERYTHING YOU NEED<br className="hidden lg:block"/> TO MOVE FORWARD
             </h2>
             <p className="text-dark-teal/80 font-regular text-[15px] md:text-base leading-relaxed text-left">
-              Share your interests and goals, and unlock the opportunities you need to make the most of your college experience—all in one place.
+              Share your interests and goals, and unlock the opportunities you need to make the most of your college experience.
             </p>
           </div>
         </div>
 
         {/* Bottom 3 Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 lg:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-4 md:gap-4 lg:gap-8">
           
-          <div className="bg-accent-coral/[.11] rounded-[2rem] p-8 md:p-6 lg:p-10 hover:bg-accent-coral/[.15] transition-colors duration-300">
-            <h3 className="text-xl font-bold text-dark-teal mb-4">Discover</h3>
-            <p className="text-dark-teal/80 font-regular text-[15px] leading-relaxed">
+          <div className="col-span-2 md:col-span-2 bg-accent-coral/[.11] rounded-[2rem] p-6 md:p-8 lg:p-10 hover:bg-accent-coral/[.15] transition-colors duration-300 flex flex-col justify-start">
+            <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-dark-teal mb-3 md:mb-4">Discover</h3>
+            <p className="text-dark-teal/80 font-regular text-[15px] lg:text-[17px] leading-relaxed">
               Find opportunities on campus you didn't know existed.
             </p>
           </div>
 
-          <div className="bg-accent-coral/[.11] rounded-[2rem] p-8 md:p-6 lg:p-10 hover:bg-accent-coral/[.15] transition-colors duration-300">
-            <h3 className="text-xl font-bold text-dark-teal mb-4">People</h3>
-            <p className="text-dark-teal/80 font-regular text-[15px] leading-relaxed">
+          <div className="col-span-1 md:col-span-1 bg-accent-coral/[.11] rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 lg:p-10 hover:bg-accent-coral/[.15] transition-colors duration-300 flex flex-col justify-start">
+            <h3 className="text-lg md:text-xl font-bold text-dark-teal mb-3 md:mb-4">People</h3>
+            <p className="text-dark-teal/80 font-regular text-[14px] md:text-[15px] leading-relaxed">
               Connect with students, alumni and peers who have walked similar paths.
             </p>
           </div>
 
-          <div className="bg-accent-coral/[.11] rounded-[2rem] p-8 md:p-6 lg:p-10 hover:bg-accent-coral/[.15] transition-colors duration-300">
-            <h3 className="text-xl font-bold text-dark-teal mb-4">Pathways</h3>
-            <p className="text-dark-teal/80 font-regular text-[15px] leading-relaxed">
+          <div className="col-span-1 md:col-span-1 bg-accent-coral/[.11] rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 lg:p-10 hover:bg-accent-coral/[.15] transition-colors duration-300 flex flex-col justify-start">
+            <h3 className="text-lg md:text-xl font-bold text-dark-teal mb-3 md:mb-4">Pathways</h3>
+            <p className="text-dark-teal/80 font-regular text-[14px] md:text-[15px] leading-relaxed">
               Explore different ways to get to your goals.
             </p>
           </div>

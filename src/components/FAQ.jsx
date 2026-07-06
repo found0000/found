@@ -4,8 +4,8 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(-1); // All closed by default
 
   const faqs = [
-    { question: "What exactly is this?", answer: "We're building a platform to help students discover opportunities, explore career pathways and connect with other students who can help them reach their goals." },
-    { question: "What kind of opportunities are available?", answer: "Things like internships, research positions, scholarships, fellowships, campus organizations, competitions, events would be recommended based on your profile." },
+    { question: "What exactly is this?", answer: "Found is a platform that helps students discover opportunities on their campus, explore the paths others have taken to reach similar goals, and learn from students who've already been there." },
+    { question: "What kind of opportunities are available?", answer: "Found recommends opportunities on your campus relevant to your interests and goals, including research positions, scholarships, fellowships, campus organizations, competitions, leadership programs, internships and events." },
     { question: "How is this different from LinkedIn or Handshake?", answer: "LinkedIn helps you build a professional attire. Handshake helps you find jobs. We're focused on helping students navigate college by discovering opportunities, pathways and people relevant to their goals." },
     { question: "Is this only for Penn State Students?", answer: "We're starting by learning from and building for Penn State Students, but our vision extends beyond a single campus." },
     { question: "How much does it cost?", answer: "The early version is completely free for students." },

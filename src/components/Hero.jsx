@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section className="relative w-full min-h-screen bg-cream flex items-center justify-center overflow-hidden pt-28 pb-20">
       
-      <div className="w-full max-w-[90rem] mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16 z-10">
+      <div className="w-full max-w-[90rem] mx-auto px-8 md:px-16 lg:px-24 flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16 z-10">
         
         {/* Left Column: Map & Button */}
         <div className="w-full md:w-[55%] lg:w-[60%] relative flex justify-center items-center">

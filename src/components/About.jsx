@@ -3,7 +3,7 @@ import aboutTree from '../assets/about-tree.png';
 
 const About = () => {
   return (
-    <section className="w-full bg-cream pt-16 md:pt-24 pb-24 md:pb-36 px-6">
+    <section id="about" className="w-full bg-cream pt-16 md:pt-24 pb-24 md:pb-36 px-6">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24">
         
         {/* Left Side: Illustration */}
@@ -24,7 +24,7 @@ const About = () => {
             <h2 className="text-2xl lg:text-4xl font-semibold tracking-[0.1em]">WHAT IS FOUND ?</h2>
           </div>
           <p className="text-sm md:text-base lg:text-xl font-regular leading-relaxed max-w-[320px] md:max-w-[470px] text-dark-teal/80 text-left">
-            We believe the best opportunities on your campus shouldn't be hidden. That’s why we’re building a better way to discover campus-specific opportunities, and navigate college with confidence.
+            We believe the best opportunities on your campus shouldn't be hidden. Found brings your campus's opportunities together in one place—personalized to your interests and goals, so you never miss the opportunities that matter most.
           </p>
         </div>
 
