@@ -21,7 +21,7 @@ const About = () => {
         {/* Right Side: Content */}
         <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-dark-teal">
           <div className="bg-primary-teal text-white rounded-xl md:rounded-2xl px-6 py-3 md:px-10 md:py-5 mb-6 md:mb-8 inline-block shadow-sm">
-            <h2 className="text-2xl lg:text-4xl font-semibold tracking-[0.1em]">WHAT IS FOUND ?</h2>
+            <h2 className="text-2xl lg:text-4xl font-semibold tracking-[0.1em]">WHAT IS FOUND?</h2>
           </div>
           <p className="text-sm md:text-base lg:text-xl font-regular leading-relaxed max-w-[320px] md:max-w-[470px] text-dark-teal/80 text-left">
             We believe the best opportunities on your campus shouldn't be hidden. Found brings your campus's opportunities together in one place—personalized to your interests and goals, so you never miss the opportunities that matter most.

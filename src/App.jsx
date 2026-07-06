@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import MapSection from './components/MapSection';
 import About from './components/About';
 import MarqueeBanner from './components/MarqueeBanner';
 import HowItWorks from './components/HowItWorks';
@@ -14,7 +13,6 @@ function App() {
     <div className="w-full min-h-screen">
       <Navbar />
       <Hero />
-      {/* <MapSection /> */}
       <About />
       <MarqueeBanner />
       <HowItWorks />
