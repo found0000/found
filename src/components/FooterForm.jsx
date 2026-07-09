@@ -58,7 +58,7 @@ const FooterForm = () => {
             Join the waitlist to be among the first to experience the platform.
           </p>
           <a 
-            href="mailto:"
+            href="mailto:kehindeazeezahsokunbi@gmail.com"
             className="inline-block px-8 py-3 border-2 border-white/20 text-white font-bold rounded-full hover:bg-white/10 hover:border-white/40 transition-all duration-300 tracking-wide text-sm"
           >
             CONTACT US
