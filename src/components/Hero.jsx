@@ -41,7 +41,7 @@ const Hero = () => {
             Your <span className="italic">personalized</span> guide to opportunities on campus
           </h1>
           <p className="text-base md:text-lg text-dark-teal/80 font-medium leading-relaxed max-w-lg">
-            Found helps you discover the opportunities that match your interests, goals and ambitions - all in one place.
+            Found is an app that helps you discover the opportunities that match your interests, goals and ambitions - all in one place.
           </p>
         </div>
 
