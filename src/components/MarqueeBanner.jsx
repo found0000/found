@@ -3,7 +3,7 @@ import React from 'react';
 const MarqueeBanner = () => {
   const repeatedContent = (
     <>
-      {Array(4).fill("OPPORTUNITIES ARE EVERYWHERE").map((text, index) => (
+      {Array(4).fill("LAUNCHING SOON").map((text, index) => (
         <div key={index} className="flex items-center">
           <div className="w-3 h-3 md:w-4 md:h-4 bg-primary-teal rounded-full flex-shrink-0 mx-6 md:mx-8"></div>
           <span className="text-white text-3xl md:text-2xl font-bold tracking-[0.2em]">
