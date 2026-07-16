@@ -6,8 +6,8 @@ import step4 from '../assets/step-4.png';
 
 const HowItWorks = () => {
   const steps = [
-    { num: '01', title: 'Tell Us about yourself', desc: 'Choose your major, interests and goals.', img: step1 },
-    { num: '02', title: 'Discover Opportunities', desc: 'Get personalized recommendations for research, scholarships, events, clubs and more.', img: step2 },
+    { num: '01', title: 'Create Your Profile', desc: 'Create your student profile by selecting your major, interests, and goals.', img: step1 },
+    { num: '02', title: 'Explore Your Personalized Feed', desc: 'Open Found to discover opportunities recommended specifically for you.', img: step2 },
     { num: '03', title: 'Take your next step', desc: 'Apply, connect and pursue opportunities that move you forward.', img: step4 },
   ];
 
