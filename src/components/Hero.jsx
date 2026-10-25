@@ -154,7 +154,7 @@ const Hero = () => {
           <div className="relative inline-block bg-brand-yellow border border-b-0 border-brand-tab-border rounded-t-[9.5px] text-white font-bold uppercase tracking-[-0.02em] px-[calc(16*var(--m))] py-[calc(10*var(--m))] text-[length:calc(14*var(--m))] lg:block lg:w-[calc(268*var(--u))] lg:h-[calc(126*var(--u))] lg:-mb-[calc(60*var(--u))] lg:pt-[calc(23*var(--u))] lg:pb-0 lg:pl-[calc(41*var(--u))] lg:pr-0 lg:text-[length:calc(20*var(--u))]">
             Our philosophy
           </div>
-          <div className="relative flex flex-col items-center text-center text-brand-ink bg-white rounded-[0_20px_20px_20px] px-[calc(20*var(--m))] pt-[calc(29*var(--m))] pb-[calc(17*var(--m))] lg:rounded-2xl lg:px-[calc(68*var(--u))] lg:pb-0 lg:pt-[calc(55*var(--u))] lg:h-[calc(590*var(--u))]">
+          <div className="relative flex flex-col items-center text-center text-brand-ink bg-white border border-brand-tab-border rounded-[0_20px_20px_20px] px-[calc(20*var(--m))] pt-[calc(29*var(--m))] pb-[calc(17*var(--m))] lg:rounded-2xl lg:px-[calc(68*var(--u))] lg:pb-0 lg:pt-[calc(55*var(--u))] lg:h-[calc(590*var(--u))]">
             <h2 className="opsz-28 font-bold uppercase tracking-[-0.02em] text-brand-purple text-[length:calc(24*var(--m))] leading-[calc(32*var(--m))] lg:text-[length:calc(50*var(--u))] lg:leading-[calc(48*var(--u))]">
               Why Found exists
             </h2>
