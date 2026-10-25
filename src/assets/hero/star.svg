@@ -1,0 +1,17 @@
+<svg width="108" height="101" viewBox="0 0 108 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!--
+  "Star 5" — Figma canvas export (Desktop Design), with its drop-shadow filter
+  rewritten as a plain shape (offset 10,4 in #EEECEE) so edges stay smooth in
+  browsers. Original: figma-ref/user-exports/Star 5.svg
+-->
+<defs>
+  <path id="star-fill" d="M70.4457 6.6939L74.6851 27.8918L93.1803 39.0833L79.2504 55.6144L82.0321 77.0524L60.4223 76.4685L45.3959 92.0097L32.3789 74.7505L10.8594 72.6921L16.2373 51.754L4.42944 33.6461L24.1525 24.796L30.9478 4.27412L50.1642 14.1763L70.4457 6.6939Z"/>
+  <path id="star-outline" d="M71.9166 6.39993L76.026 26.9496L93.957 37.8005L95.4578 38.7082L94.327 40.0496L80.8224 56.0754L83.5198 76.8592L83.7451 78.5987L81.9911 78.5519L61.0426 77.9849L46.4742 93.0521L45.2549 94.3137L44.198 92.9125L31.5785 76.1806L10.7164 74.1849L8.97009 74.0182L9.40696 72.3189L14.6198 52.0188L3.17243 34.4655L2.21449 32.9954L3.81559 32.2774L22.9362 23.6973L29.5236 3.80234L30.0756 2.13728L31.6345 2.94101L50.2645 12.5402L69.9264 5.28678L71.5723 4.67888L71.9166 6.39993Z"/>
+</defs>
+<g transform="translate(10 4)">
+  <use href="#star-fill" fill="#EEECEE"/>
+  <use href="#star-outline" stroke="#EEECEE" stroke-width="3"/>
+</g>
+<use href="#star-fill" fill="#FDF5F5"/>
+<use href="#star-outline" stroke="#A0C8FF" stroke-width="3"/>
+</svg>
