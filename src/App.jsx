@@ -1,22 +1,18 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './components/About';
-import MarqueeBanner from './components/MarqueeBanner';
 import HowItWorks from './components/HowItWorks';
-import Features from './components/Features';
+import Discover from './components/Discover';
 import FAQ from './components/FAQ';
 import FooterForm from './components/FooterForm';
 
 function App() {
   return (
-    <div className="w-full min-h-screen">
+    <div className="page w-full min-h-screen">
       <Navbar />
       <Hero />
-      <About />
-      <MarqueeBanner />
       <HowItWorks />
-      <Features />
+      <Discover />
       <FAQ />
       <FooterForm />
     </div>

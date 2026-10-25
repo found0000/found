@@ -1,17 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /*
+     * Layout scale for the redesign, measured against the .page container (the
+     * full page width), so the design fills the screen at every width.
+     * --u: desktop layout (from 900px up). The Figma desktop frame is 1440 wide;
+     *      1 u = 1px at 1440 and scales with the screen: smaller below, larger above
+     *      (the 1280 tablet frame is exactly this design at 0.889x).
+     * --m: mobile layout (below 900px). The Figma mobile frame is 402 wide.
+     */
+    --u: calc(100cqw / 1440);
+    --m: calc(100cqw / 402);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /*
+   * Typeface: Inter (free, SIL Open Font License). The designer uses two of its
+   * optical-size cuts: "Inter 28pt" for large text (headings, the hero title and
+   * the 22px paragraphs on desktop) and "Inter 24pt" for everything smaller.
+   * Optical sizing is set by hand (not from the font size) because the page
+   * scales with the screen.
+   */
   body {
-    @apply font-poppins;
-    @apply text-dark-teal;
-    @apply bg-cream;
+    font-optical-sizing: none;
+    font-variation-settings: 'opsz' 24;
+    @apply font-display;
+    @apply text-brand-ink;
+    @apply bg-white;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+  }
+
+  .page {
+    container-type: inline-size;
+  }
+}
+
+/* Inter 28pt cut: always (headings) ... */
+.opsz-28 {
+  font-variation-settings: 'opsz' 28;
+}
+
+/* ... or only in the desktop layout (paragraphs that are 22px on desktop, 16-18px on mobile) */
+@media (min-width: 900px) {
+  .lg-opsz-28 {
+    font-variation-settings: 'opsz' 28;
   }
 }
 
@@ -31,30 +73,11 @@
   width: max-content;
 }
 
-/* Continuous smooth fade in/out for map pins */
-@keyframes twinkle {
-  0%, 100% {
-    opacity: 0;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-  50% {
-    opacity: 1;
+  .animate-marquee {
+    animation: none;
   }
-}
-
-.animate-twinkle {
-  opacity: 0;
-  animation: twinkle 4s ease-in-out infinite forwards;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
-.animate-float {
-  animation: float 4s ease-in-out infinite;
 }

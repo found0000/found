@@ -1,0 +1,17 @@
+<svg width="128" height="132" viewBox="0 0 128 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!--
+  "lime green shape" — Figma canvas export (Desktop Design, rotation baked in),
+  with its two drop-shadow filters rewritten as plain shapes (offset 9,5 in
+  #ABF958). The white outline's shadow falls over the fill, which draws the
+  darker green line inside the right edge, exactly as in Figma.
+  Original: figma-ref/user-exports/lime green shape.svg
+-->
+<defs>
+  <path id="lime-fill" d="M89.3363 30.1326C91.2 29.4278 93.1633 31.1156 92.7462 33.0639L73.3264 123.765C72.9357 125.59 70.721 126.283 69.2696 125.035L1.93031 67.1476C0.478877 65.8999 0.832034 63.6061 2.5772 62.9461L89.3363 30.1326Z"/>
+  <path id="lime-outline" d="M89.3364 30.1327C91.2 29.4279 93.1633 31.1156 92.7462 33.0639L73.3263 123.765C72.9357 125.59 70.721 126.283 69.2696 125.035L70.3386 123.792C70.8224 124.208 71.561 123.977 71.6912 123.368L91.1107 32.6669C91.2496 32.0176 90.5954 31.4553 89.9743 31.69L3.215 64.5033C2.63329 64.7233 2.51566 65.4881 2.99948 65.904L1.93043 67.1476L1.79948 67.0277C0.544148 65.7991 0.863545 63.7248 2.41765 63.0127L2.57738 62.9462L89.3364 30.1327ZM70.3386 123.792L69.2696 125.035L1.93043 67.1476L2.99948 65.904L70.3386 123.792Z"/>
+</defs>
+<use href="#lime-fill" fill="#ABF958" transform="translate(9 5)"/>
+<use href="#lime-fill" fill="#CAF492"/>
+<use href="#lime-outline" fill="#ABF958" transform="translate(9 5)"/>
+<use href="#lime-outline" fill="white"/>
+</svg>

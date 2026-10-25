@@ -1,0 +1,15 @@
+<svg width="126" height="125" viewBox="0 0 126 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!--
+  "Ellipse 12" — Figma canvas export (Desktop Design), with its filters
+  rewritten as plain shapes so edges stay smooth in browsers:
+    - drop shadow: offset 8,7 in #FF9CFF
+    (Figma's inner shadow is dropped: Figma's own render doesn't show it.)
+  Original: figma-ref/user-exports/Ellipse 12.svg
+-->
+<defs>
+  <circle id="disc" cx="58.5" cy="58.5" r="58.5"/>
+</defs>
+<use href="#disc" fill="#FF9CFF" transform="translate(8 7)"/>
+<use href="#disc" fill="#FFD0FF"/>
+<circle cx="58.5" cy="58.5" r="57" stroke="white" stroke-width="3"/>
+</svg>
