@@ -132,47 +132,49 @@ const Hero = () => {
         {/* Intro */}
         <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center text-center top-[calc(102*var(--m))] w-[calc(381*var(--m))] lg:top-[calc(171*var(--u))] lg:w-[calc(630*var(--u))]">
           <h1 className="opsz-28 font-bold capitalize tracking-[-0.02em] text-brand-ink text-[length:calc(32*var(--m))] leading-[calc(33*var(--m))] lg:text-[length:calc(55*var(--u))] lg:leading-[1.02]">
-            Your personalized guide to opportunities on campus.
+            Discover opportunities you didn&rsquo;t know existed.
           </h1>
           <p className="lg-opsz-28 text-brand-ink tracking-[-0.02em] mt-[calc(33*var(--m))] w-[calc(300*var(--m))] text-[length:calc(17*var(--m))] leading-[calc(17*var(--m))] lg:mt-[calc(54*var(--u))] lg:w-[calc(381*var(--u))] lg:text-[length:calc(22*var(--u))] lg:leading-[1.045] lg:tracking-normal">
-            Found helps you discover the opportunities that match your interest, goals, and ambitions. All in one place.
+            Discover campus events, programs, experiences and more, all in one place. Found helps you find opportunities that
+            match your interests and goals.
           </p>
           <Button
             tone="purple"
             onClick={scrollToWaitlist}
             className="opsz-28 font-medium h-[calc(37*var(--m))] text-[length:calc(14*var(--m))] tracking-[-0.02em] mt-[calc(32*var(--m))] w-[calc(139*var(--m))] border-brand-purple lg:mt-[calc(42*var(--u))] lg:w-[calc(212*var(--u))] lg:h-[calc(50*var(--u))] lg:text-[length:calc(17*var(--u))]"
           >
-            JOIN WAITLIST
+            JOIN THE WAITLIST
           </Button>
         </div>
 
         {/* "Why Found exists": the About section the navbar scrolls to */}
         <article
           id="about"
-          className="absolute left-1/2 -translate-x-1/2 scroll-mt-[calc(77*var(--m))] top-[calc(580*var(--m))] w-[calc(362*var(--m))] lg:scroll-mt-[calc(76px_+_26*var(--u))] lg:top-[calc(893*var(--u))] lg:w-[calc(880*var(--u))]"
+          className="absolute left-1/2 -translate-x-1/2 scroll-mt-[calc(77*var(--m))] top-[calc(570*var(--m))] w-[calc(362*var(--m))] lg:scroll-mt-[calc(76px_+_26*var(--u))] lg:top-[calc(893*var(--u))] lg:w-[calc(880*var(--u))]"
         >
           <div className="relative inline-block bg-brand-yellow border border-b-0 border-brand-tab-border rounded-t-[9.5px] text-white font-bold uppercase tracking-[-0.02em] px-[calc(16*var(--m))] py-[calc(10*var(--m))] text-[length:calc(14*var(--m))] lg:block lg:w-[calc(268*var(--u))] lg:h-[calc(126*var(--u))] lg:-mb-[calc(60*var(--u))] lg:pt-[calc(23*var(--u))] lg:pb-0 lg:pl-[calc(41*var(--u))] lg:pr-0 lg:text-[length:calc(20*var(--u))]">
             Our philosophy
           </div>
-          <div className="relative flex flex-col items-center text-center text-brand-ink bg-white border border-brand-tab-border rounded-[0_20px_20px_20px] px-[calc(20*var(--m))] pt-[calc(29*var(--m))] pb-[calc(17*var(--m))] lg:rounded-2xl lg:px-[calc(68*var(--u))] lg:pb-0 lg:pt-[calc(55*var(--u))] lg:h-[calc(590*var(--u))]">
-            <h2 className="opsz-28 font-bold uppercase tracking-[-0.02em] text-brand-purple text-[length:calc(24*var(--m))] leading-[calc(32*var(--m))] lg:text-[length:calc(50*var(--u))] lg:leading-[calc(48*var(--u))]">
-              Why Found exists
+          {/* Card copy is left-aligned; the card grows with its text. */}
+          <div className="relative flex flex-col items-start text-left text-brand-ink bg-white border border-brand-tab-border rounded-[0_20px_20px_20px] px-[calc(20*var(--m))] pt-[calc(29*var(--m))] pb-[calc(20*var(--m))] lg:rounded-2xl lg:px-[calc(68*var(--u))] lg:pt-[calc(55*var(--u))] lg:pb-[calc(56*var(--u))]">
+            <h2 className="opsz-28 font-bold tracking-[-0.02em] text-brand-purple text-[length:calc(23*var(--m))] leading-[calc(32*var(--m))] lg:text-[length:calc(49*var(--u))] lg:leading-[calc(48*var(--u))]">
+              Why Found Exists
             </h2>
-            <p className="opsz-28 font-bold mt-[calc(31*var(--m))] w-[calc(290*var(--m))] text-[length:calc(16*var(--m))] leading-[calc(20*var(--m))] lg:mt-[calc(43*var(--u))] lg:w-full lg:text-[length:calc(22*var(--u))] lg:leading-[calc(24*var(--u))]">
-              Most opportunities on campus were never secret.
+            <p className="opsz-28 font-bold mt-[calc(24*var(--m))] text-[length:calc(16*var(--m))] leading-[calc(20*var(--m))] lg:mt-[calc(36*var(--u))] lg:text-[length:calc(22*var(--u))] lg:leading-[calc(24*var(--u))]">
+              The best opportunities aren&rsquo;t always easy to find.
             </p>
-            <p className="opsz-28 mt-[calc(23*var(--m))] w-[calc(310*var(--m))] text-[length:calc(15*var(--m))] leading-[1.5] lg:mt-[calc(26*var(--u))] lg:w-full lg:text-[length:calc(22*var(--u))]">
-              They were just scattered across inboxes, noticeboards, group chats and one friend of a friend who happened to
-              know. By the time you hear about them, the deadline&rsquo;s gone.
+            <p className="opsz-28 mt-[calc(16*var(--m))] text-[length:calc(15*var(--m))] leading-[1.5] lg:mt-[calc(22*var(--u))] lg:text-[length:calc(22*var(--u))]">
+              They&rsquo;re scattered across emails, group chats, noticeboards, and conversations you might never be part of.
+              Sometimes, by the time you hear about them, the deadline has already passed.
             </p>
             {/* Pale pink call-out */}
-            <div className="w-full flex flex-col items-center bg-[#F6EEF2] mt-[calc(33*var(--m))] h-[calc(160*var(--m))] pt-[calc(33*var(--m))] lg:mt-[calc(45*var(--u))] lg:h-[calc(184*var(--u))] lg:pt-[calc(38*var(--u))]">
-              <h3 className="opsz-28 font-bold uppercase text-brand-purple text-[length:calc(16*var(--m))] leading-[calc(20*var(--m))] lg:text-[length:calc(22*var(--u))] lg:leading-[calc(24*var(--u))]">
+            <div className="w-full flex flex-col items-start bg-[#F6EEF2] mt-[calc(28*var(--m))] px-[calc(18*var(--m))] py-[calc(22*var(--m))] lg:mt-[calc(40*var(--u))] lg:px-[calc(36*var(--u))] lg:py-[calc(34*var(--u))]">
+              <h3 className="opsz-28 font-bold text-brand-purple text-[length:calc(16*var(--m))] leading-[calc(20*var(--m))] lg:text-[length:calc(22*var(--u))] lg:leading-[calc(24*var(--u))]">
                 That&rsquo;s why we&rsquo;re building Found.
               </h3>
-              <p className="opsz-28 mt-[calc(15*var(--m))] w-[calc(290*var(--m))] text-[length:calc(15*var(--m))] leading-[1.5] lg:mt-[calc(21*var(--u))] lg:w-[calc(600*var(--u))] lg:text-[length:calc(22*var(--u))]">
-                One place where everything your campus has to offer lives, matched to your interests, your goals and your
-                curiosity.
+              <p className="opsz-28 mt-[calc(10*var(--m))] text-[length:calc(15*var(--m))] leading-[1.5] lg:mt-[calc(14*var(--u))] lg:text-[length:calc(22*var(--u))]">
+                One place to discover what&rsquo;s happening on your campus, explore opportunities that match your interests, and
+                find things you never knew existed.
               </p>
             </div>
           </div>

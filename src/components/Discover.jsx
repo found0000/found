@@ -29,10 +29,14 @@ const CardOneDesktopStickers = () => (
     <Deco box={[611, 152, 402.36, 294.681]} size={[223.073, 363.508]} rotate={-102.17} shadow={[3, 0, 0.3, NOTE_SHADOW]}
       innerStyle={{ background: '#FFD0FF', borderRadius: u(4) }} />
     {/* Note text: centred on the note (about 65px clear on every side) and tilted at exactly the note's angle (-102.17 + 90 = -12.17deg). */}
-    <Deco box={[685.78, 229.07, 252.79, 140.55]} size={[238.692, 92.308]} rotate={-12.17}>
+    <Deco box={[660.71, 223.65, 302.94, 151.37]} size={[290, 92.308]} rotate={-12.17}>
       <div className="w-full h-full flex items-center justify-center">
-        <p className="opsz-28 text-center text-brand-ink leading-[0.97]" style={{ fontSize: u(19) }}>
-          Signing up for Found is completely free. No hidden costs, no catch, just full access to every opportunity on your campus.
+        <p className="opsz-28 text-center text-brand-ink leading-[1.15]" style={{ fontSize: u(19) }}>
+          <span className="font-semibold">Great Opportunities.</span>
+          <br />
+          <span className="font-semibold">Zero subscription fees.</span>
+          <br />
+          Found is free for all students.
         </p>
       </div>
     </Deco>
@@ -44,28 +48,34 @@ const CardOneDesktopStickers = () => (
         FOUND FACT
       </Button>
     </Deco>
+    <div className="absolute inset-0 pointer-events-none" style={{ transform: 'translateY(calc(var(--gd) * var(--u)))' }}>
     <Deco box={[29, 475, 214.44, 57.68]} size={[214, 56]} rotate={-0.45}>
       <Button tone="orange" onClick={scrollToWaitlist} className="opsz-28 font-medium pointer-events-auto w-full h-full tracking-[-0.02em]" style={{ borderWidth: u(2), fontSize: u(17) }}>
-        JOIN WAITLIST
+        JOIN THE WAITLIST
       </Button>
     </Deco>
+    </div>
     <Deco box={[580, 412, 152.576, 192.74]} size={[112.986, 169.479]} rotate={14.82}><Fill src={toteBag} /></Deco>
   </div>
 );
 
 const CardOneMobileStickers = () => (
-  <div className="absolute inset-0 lg:hidden">
+  <div className="absolute inset-0 lg:hidden" style={{ transform: 'translateY(calc(var(--gm) * var(--m)))' }}>
     <Deco unit="m" box={[19, 254, 143.32, 42.12]} size={[143, 41]} rotate={-0.45}>
       <Button tone="orange" onClick={scrollToWaitlist} className="opsz-28 font-medium pointer-events-auto w-full h-full tracking-[-0.02em]" style={{ borderWidth: m(2), fontSize: m(14) }}>
-        JOIN WAITLIST
+        JOIN THE WAITLIST
       </Button>
     </Deco>
     <Deco unit="m" box={[42.41, 292.38, 275.542, 183.971]} size={[252.437, 127.554]} rotate={-13.77} shadow={[2.059, 0, 0.103, NOTE_SHADOW]}
       innerStyle={{ background: '#FFD0FF', borderRadius: m(2.746) }}>
       {/* Text sits inside the note, so it shares the note's exact angle, centred both ways. */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <p className="text-center text-brand-ink" style={{ width: m(203), fontSize: m(14), lineHeight: 0.97 }}>
-          Signing up for Found is completely free. No hidden costs, no catch, just full access to every opportunity on your campus.
+        <p className="text-center text-brand-ink" style={{ width: m(203), fontSize: m(14), lineHeight: 1.15 }}>
+          <span className="font-semibold">Great Opportunities.</span>
+          <br />
+          <span className="font-semibold">Zero subscription fees.</span>
+          <br />
+          Found is free for all students.
         </p>
       </div>
     </Deco>
@@ -82,7 +92,7 @@ const CardOneMobileStickers = () => (
 );
 
 const CardOne = () => (
-  <div className="absolute left-[calc(24*var(--m))] top-[calc(36*var(--m))] w-[calc(354*var(--m))] h-[calc(543*var(--m))] lg:left-[calc(169*var(--u))] lg:top-[calc(101*var(--u))] lg:w-[calc(1078*var(--u))] lg:h-[calc(596*var(--u))]">
+  <div className="absolute left-[calc(24*var(--m))] top-[calc(36*var(--m))] w-[calc(354*var(--m))] h-[calc((543+var(--gm))*var(--m))] lg:left-[calc(169*var(--u))] lg:top-[calc(101*var(--u))] lg:w-[calc(1078*var(--u))] lg:h-[calc((596+var(--gd))*var(--u))]">
     {/* Folder tabs */}
     <div className="hidden lg:block">
       <div className="absolute left-0 top-0 bg-brand-pink border border-brand-tab-border rounded-t-[9.5px]" style={{ width: u(344), height: u(191) }} />
@@ -94,16 +104,20 @@ const CardOne = () => (
     </div>
 
     {/* White card */}
-    <div className="absolute left-0 right-0 bg-white border border-brand-tab-border rounded-2xl top-[calc(33*var(--m))] h-[calc(510*var(--m))] lg:top-[calc(52*var(--u))] lg:h-[calc(544*var(--u))]" />
+    <div className="absolute left-0 right-0 bg-white border border-brand-tab-border rounded-2xl top-[calc(33*var(--m))] h-[calc((510+var(--gm))*var(--m))] lg:top-[calc(52*var(--u))] lg:h-[calc((544+var(--gd))*var(--u))]" />
 
     {/* Text */}
     <div className="absolute flex flex-col gap-[calc(34*var(--m))] left-[calc(20*var(--m))] right-[calc(20*var(--m))] top-[calc(64*var(--m))] lg:gap-0 lg:right-auto lg:left-[calc(32*var(--u))] lg:top-[calc(109*var(--u))] lg:w-[calc(611*var(--u))]">
-      <h2 className="opsz-28 font-bold uppercase tracking-[-0.02em] text-brand-ink w-[calc(294*var(--m))] text-[length:calc(24*var(--m))] leading-[calc(27*var(--m))] lg:w-full lg:h-[calc(149*var(--u))] lg:text-[length:calc(50*var(--u))] lg:leading-[1.2]">
-        Everything you need to move forward
+      <h2 className="opsz-28 font-bold uppercase tracking-[-0.02em] text-brand-ink [text-wrap:balance] w-[calc(294*var(--m))] text-[length:calc(24*var(--m))] leading-[calc(27*var(--m))] lg:w-full lg:text-[length:calc(50*var(--u))] lg:leading-[1.2]">
+        There&rsquo;s more out there.
       </h2>
-      <p className="opsz-28 text-brand-ink max-w-[calc(256*var(--m))] lg:max-w-none text-[length:calc(16*var(--m))] leading-[calc(17*var(--m))] lg:text-brand-ink lg:mt-[calc(61*var(--u))] lg:w-[calc(420*var(--u))] lg:text-[length:calc(22*var(--u))] lg:leading-[1.02]">
-        Share your interests and goals, and Found matches you with everything your campus has to offer. Picked for you, not for everyone.
-      </p>
+      <div className="opsz-28 text-brand-ink flex flex-col gap-[calc(12*var(--m))] max-w-[calc(300*var(--m))] lg:max-w-none text-[length:calc(16*var(--m))] leading-[calc(19*var(--m))] lg:gap-[calc(16*var(--u))] lg:mt-[calc(48*var(--u))] lg:w-[calc(470*var(--u))] lg:text-[length:calc(22*var(--u))] lg:leading-[1.15]">
+        <p>
+          From campus events and competitions to programs and experiences you might never have heard about, there&rsquo;s more to
+          discover on campus than you think.
+        </p>
+        <p>Found brings opportunities together in one place, so you can spend less time searching and more time exploring.</p>
+      </div>
     </div>
 
     <CardOneDesktopStickers />
@@ -113,9 +127,11 @@ const CardOne = () => (
 
 const Discover = () => {
   return (
-    <section className="relative bg-brand-sky">
+    // --gm / --gd: extra height (mobile / desktop units) the longer copy needs; the button,
+    // mobile stickers and card bottom move down by this much.
+    <section className="relative bg-brand-sky" style={{ '--gm': 82, '--gd': 67 }}>
       <MarqueeBanner variant="hub" tone="purple" />
-      <div className="relative w-full -mt-[calc(1*var(--m))] lg:mt-0 h-[calc(575*var(--m))] lg:h-[calc(746*var(--u))]">
+      <div className="relative w-full -mt-[calc(1*var(--m))] lg:mt-0 h-[calc((575+var(--gm))*var(--m))] lg:h-[calc((746+var(--gd))*var(--u))]">
         <CardOne />
       </div>
     </section>

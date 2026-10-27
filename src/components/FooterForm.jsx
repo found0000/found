@@ -8,14 +8,22 @@ import { Deco, Fill } from './decor/Deco';
 import Button from './ui/Button';
 
 const YEAR_OPTIONS = ['Freshman', 'Sophomore', 'Junior', 'Senior', 'Grad'];
-const INTEREST_OPTIONS = ['Opportunities', 'Pathways', 'Mentors', 'Course Recommendations', 'Connections', 'Other'];
+const OTHER_INTEREST = 'Other / Not sure yet';
+const INTEREST_OPTIONS = [
+  'Campus events & wops',
+  'Research opportunities',
+  'Competitions & hackathons',
+  'Student programs & fellowships',
+  'Volunteering',
+  OTHER_INTEREST,
+];
 
 /*
  * Sizes use --k: the mobile unit (--m) below lg and the desktop unit (--u) from
  * lg up (set on the <footer>), so the form scales with the rest of the design.
  */
 const LABEL = 'text-white font-bold uppercase tracking-[calc(0.6*var(--k))] text-[length:calc(12*var(--k))] leading-[calc(16*var(--k))]';
-const FIELD_TEXT = 'text-[length:calc(15*var(--k))] text-brand-ink';
+const FIELD_TEXT = 'text-[length:calc(16*var(--k))] text-brand-ink';
 const FIELD_BOX = 'w-full h-[calc(52*var(--k))] rounded-[calc(6*var(--k))] bg-white shadow-[inset_0_2px_4px_rgba(0,0,0,0.05)]';
 const FOCUS = 'focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple';
 
@@ -24,9 +32,20 @@ const FOCUS = 'focus:outline-none focus-visible:outline focus-visible:outline-2 
  * sits in the page flow directly under the field and pushes the fields below it
  * down, as in the design. A hidden required input keeps the browser's native
  * "please fill in this field" validation working, as before.
+ *
+ * `multiple`: value is an array, each option shows a checkbox, the list stays
+ * open while ticking, and the question is optional (no hidden required input).
  */
-const Dropdown = ({ id, label, value, displayValue, options, optionLabel = (o) => o, open, onToggle, onSelect }) => {
+const CHECK_ICON = (
+  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" className="w-full h-full">
+    <path d="M3.5 8.5l3 3 6-7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+const Dropdown = ({ id, label, value, displayValue, options, optionLabel = (o) => o, open, onToggle, onSelect, multiple = false }) => {
   const ref = useRef(null);
+  const isEmpty = multiple ? value.length === 0 : value === '';
+  const isSelected = (option) => (multiple ? value.includes(option) : value === option);
 
   // Close on outside click or Escape.
   useEffect(() => {
@@ -52,28 +71,30 @@ const Dropdown = ({ id, label, value, displayValue, options, optionLabel = (o) =
         aria-expanded={open}
         aria-labelledby={`${id}-label ${id}`}
         onClick={() => onToggle(!open)}
-        className={`${FIELD_BOX} flex items-center justify-between text-left px-[calc(20*var(--k))] ${FOCUS}`}
+        className={`${FIELD_BOX} flex items-center justify-between gap-[calc(12*var(--k))] text-left px-[calc(20*var(--k))] ${multiple ? '!h-auto min-h-[calc(52*var(--k))] py-[calc(14*var(--k))]' : ''} ${FOCUS}`}
       >
-        <span className={`${FIELD_TEXT} leading-[calc(24*var(--k))] ${value === '' ? '!text-[#86929C]' : ''}`}>
-          {value === '' ? 'Select...' : displayValue}
+        <span className={`${FIELD_TEXT} leading-[calc(24*var(--k))] ${multiple ? '' : 'truncate'} ${isEmpty ? '!text-[#86929C]' : ''}`}>
+          {isEmpty ? 'Select...' : displayValue}
         </span>
         <img
           src={selectChevron}
           alt=""
-          className={`w-[calc(22.5*var(--k))] h-[calc(22.5*var(--k))] transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
+          className={`shrink-0 w-[calc(22.5*var(--k))] h-[calc(22.5*var(--k))] transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
         />
       </button>
 
-      {/* Hidden input to keep native form 'required' validation working */}
-      <input
-        type="text"
-        required
-        value={value}
-        onChange={() => {}}
-        className="opacity-0 absolute pointer-events-none w-0 h-0 bottom-0 left-1/2"
-        tabIndex={-1}
-        aria-hidden="true"
-      />
+      {/* Hidden input to keep native form 'required' validation working (single-choice questions only) */}
+      {!multiple && (
+        <input
+          type="text"
+          required
+          value={value}
+          onChange={() => {}}
+          className="opacity-0 absolute pointer-events-none w-0 h-0 bottom-0 left-1/2"
+          tabIndex={-1}
+          aria-hidden="true"
+        />
+      )}
 
       {/*
         Opens and closes smoothly, like the FAQ: the row grows from 0fr to 1fr.
@@ -87,16 +108,24 @@ const Dropdown = ({ id, label, value, displayValue, options, optionLabel = (o) =
         <div className="overflow-hidden"><div className="pt-[calc(8*var(--k))]">
           <ul
             role="listbox"
+            aria-multiselectable={multiple || undefined}
             aria-labelledby={`${id}-label`}
             className="list-none m-0 p-0 py-[calc(10*var(--k))] bg-white rounded-[calc(6*var(--k))]"
           >
             {options.map((option) => (
-              <li key={option} role="option" aria-selected={value === option}>
+              <li key={option} role="option" aria-selected={isSelected(option)}>
                 <button
                   type="button"
                   onClick={() => onSelect(option)}
-                  className={`w-full h-[calc(36*var(--k))] flex items-center text-left px-[calc(24*var(--k))] text-[length:calc(16*var(--k))] text-black hover:bg-black/5 focus-visible:bg-black/5 focus:outline-none ${value === option ? 'font-bold' : ''}`}
+                  className={`w-full min-h-[calc(36*var(--k))] flex items-center gap-[calc(12*var(--k))] text-left px-[calc(24*var(--k))] py-[calc(6*var(--k))] text-[length:calc(17*var(--k))] leading-[calc(22*var(--k))] text-black hover:bg-black/5 focus-visible:bg-black/5 focus:outline-none ${!multiple && isSelected(option) ? 'font-bold' : ''}`}
                 >
+                  {multiple && (
+                    <span
+                      className={`shrink-0 flex items-center justify-center w-[calc(18*var(--k))] h-[calc(18*var(--k))] rounded-[calc(4*var(--k))] border-[calc(1.5*var(--k))] transition-colors ${isSelected(option) ? 'bg-brand-purple border-brand-purple' : 'bg-white border-[#86929C]'}`}
+                    >
+                      {isSelected(option) && CHECK_ICON}
+                    </span>
+                  )}
                   {optionLabel(option)}
                 </button>
               </li>
@@ -108,13 +137,13 @@ const Dropdown = ({ id, label, value, displayValue, options, optionLabel = (o) =
   );
 };
 
-const TextField = ({ id, label, type = 'text', placeholder, value, onChange }) => (
+const TextField = ({ id, label, type = 'text', placeholder, value, onChange, required = true }) => (
   <div className="flex flex-col gap-[calc(8*var(--k))]">
     <label htmlFor={id} className={LABEL}>{label}</label>
     <input
       type={type}
       id={id}
-      required
+      required={required}
       placeholder={placeholder}
       value={value}
       onChange={onChange}
@@ -140,7 +169,7 @@ const FooterForm = () => {
     name: '',
     year: '',
     email: '',
-    interest: '',
+    interest: [],
     otherInterest: ''
   });
   const [submitted, setSubmitted] = useState(false);
@@ -160,13 +189,15 @@ const FooterForm = () => {
         name: formData.name,
         year: formData.year,
         email: formData.email,
-        interest: formData.interest === 'Other' ? formData.otherInterest : formData.interest,
+        // Several choices are saved as one text value, e.g. "Volunteering, Research opportunities".
+        // "Other / Not sure yet" is replaced by what they typed, as before. Empty if they skipped the question.
+        interest: formData.interest.map((option) => (option === OTHER_INTEREST ? formData.otherInterest : option)).join(', '),
         timestamp: serverTimestamp(),
       });
       setSubmitted(true);
       setTimeout(() => {
         setSubmitted(false);
-        setFormData({ name: '', year: '', email: '', interest: '', otherInterest: '' });
+        setFormData({ name: '', year: '', email: '', interest: [], otherInterest: '' });
       }, 3000);
     } catch (err) {
       console.error("Firebase error:", err);
@@ -197,15 +228,15 @@ const FooterForm = () => {
         </div>
 
         {/* Pitch */}
-        <div className="relative flex flex-col items-center text-center text-white pt-[calc(71*var(--k))] lg:absolute lg:items-start lg:text-left lg:pt-0 lg:left-[calc(147*var(--k))] lg:top-[calc(152*var(--k))] lg:w-[calc(469*var(--k))]">
-          <h2 className="opsz-28 font-bold uppercase tracking-[-0.02em] w-[calc(387*var(--k))] text-[length:calc(32*var(--k))] leading-[calc(36*var(--k))] lg:w-full lg:text-[length:calc(50*var(--k))] lg:leading-[calc(55*var(--k))]">
-            Ready to find opportunities ?
+        <div className="relative flex flex-col items-center text-center text-white pt-[calc(71*var(--k))] lg:absolute lg:items-start lg:text-left lg:pt-0 lg:left-[calc(147*var(--k))] lg:top-[calc(152*var(--k))] lg:w-[calc(540*var(--k))]">
+          <h2 className="opsz-28 font-bold uppercase tracking-[-0.02em] [text-wrap:balance] w-[calc(387*var(--k))] text-[length:calc(32*var(--k))] leading-[calc(36*var(--k))] lg:w-full lg:text-[length:calc(50*var(--k))] lg:leading-[calc(55*var(--k))]">
+            Be among the first to get Found.
           </h2>
           <p className="opsz-28 font-medium text-[#FAFAFA] mt-[calc(29*var(--k))] w-[calc(343*var(--k))] text-[length:calc(18*var(--k))] leading-[calc(24*var(--k))] lg:mt-[calc(39*var(--k))] lg:w-[calc(419*var(--k))] lg:text-[length:calc(22*var(--k))] lg:leading-[calc(22*var(--k))]">
-            Found is launching at Penn State!
+            Found is coming to Penn State!
           </p>
-          <p className="opsz-28 text-[#FAFAFA] mt-[calc(21*var(--k))] text-[length:calc(18*var(--k))] leading-[calc(21*var(--k))] lg:mt-[calc(27*var(--k))] lg:text-[length:calc(22*var(--k))] lg:leading-[calc(26*var(--k))]">
-            Join the waitlist to be among the first to<br />experience the platform.
+          <p className="opsz-28 text-[#FAFAFA] mt-[calc(21*var(--k))] w-[calc(343*var(--k))] lg:w-[calc(469*var(--k))] text-[length:calc(18*var(--k))] leading-[calc(21*var(--k))] lg:mt-[calc(27*var(--k))] lg:text-[length:calc(22*var(--k))] lg:leading-[calc(26*var(--k))]">
+            Join the waitlist for early access and be among the first to discover opportunities picked for you.
           </p>
           <ContactButton className="mt-[calc(21*var(--k))] w-[calc(154*var(--k))] h-[calc(40*var(--k))] text-[length:calc(14*var(--k))] lg:mt-[calc(41*var(--k))] lg:w-[calc(174*var(--k))] lg:h-[calc(47*var(--k))]" />
         </div>
@@ -249,20 +280,27 @@ const FooterForm = () => {
 
             <Dropdown
               id="interest"
-              label="What interests you the most?"
+              label="What type of opportunities interest you?"
+              multiple
               value={formData.interest}
-              displayValue={formData.interest === 'Other' ? 'Other: Please Specify' : formData.interest}
+              displayValue={formData.interest.join(', ')}
               options={INTEREST_OPTIONS}
-              optionLabel={(option) => (option === 'Other' ? 'Other: Please Specify' : option)}
               open={dropdownOpen}
               onToggle={setDropdownOpen}
               onSelect={(option) => {
-                setFormData({...formData, interest: option, otherInterest: ''});
-                setDropdownOpen(false);
+                // Tick / untick; the list stays open so several can be picked.
+                setFormData((prev) => {
+                  const has = prev.interest.includes(option);
+                  return {
+                    ...prev,
+                    interest: has ? prev.interest.filter((o) => o !== option) : [...prev.interest, option],
+                    otherInterest: option === OTHER_INTEREST && has ? '' : prev.otherInterest,
+                  };
+                });
               }}
             />
 
-            {formData.interest === 'Other' && (
+            {formData.interest.includes(OTHER_INTEREST) && (
               <TextField
                 id="otherInterest"
                 label="Please specify"
@@ -286,7 +324,7 @@ const FooterForm = () => {
               submitted ? 'bg-green-500 text-white' : 'bg-brand-sky text-brand-purple hover:brightness-105'
             }`}
           >
-            {loading ? 'JOINING...' : submitted ? 'YOU\'RE IN!' : 'JOIN WAITLIST'}
+            {loading ? 'JOINING...' : submitted ? 'YOU\'RE IN!' : 'JOIN THE WAITLIST'}
           </button>
         </form>
       </div>

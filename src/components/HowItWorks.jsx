@@ -52,7 +52,7 @@ const STEPS = [
     num: '01.',
     lead: 'Create your',
     word: 'profile',
-    desc: 'Tell Found your major, interests and goals, so it knows what to match you with.',
+    desc: 'Tell us a little about yourself — your major, interests, and goals — so Found can find opportunities that fit you.',
     art: (
       <img
         src={stepProfile}
@@ -69,7 +69,7 @@ const STEPS = [
     num: '02.',
     lead: 'Explore your',
     word: 'feed',
-    desc: 'Found brings everything your campus has to offer into one feed, picked for you.',
+    desc: 'Discover campus opportunities picked for you, all in one personalized feed.',
     art: (
       <img
         src={stepFeed}
@@ -86,7 +86,7 @@ const STEPS = [
     num: '03.',
     lead: 'Make your',
     word: 'move',
-    desc: "Apply, connect, or sign up. Whatever gets you closer to what you're after.",
+    desc: 'Found something interesting? Explore the details, sign up, or apply and take your next step.',
     art: <MoveArt />,
     artM: [78.5, 81.5, 0.5],
     artD: [75.8, 113.1, 0.83],
@@ -101,7 +101,8 @@ const StepCard = ({ step }) => (
       {step.num}
     </span>
 
-    <div className="relative bg-white border border-brand-ink rounded w-[calc(277*var(--k))] h-[calc(295*var(--k))] lg:w-[calc(315*var(--k))] lg:h-[calc(448*var(--k))]">
+    {/* The description sits in the flow below the (absolutely placed) title and art, so the card grows with it. */}
+    <div className="relative grow bg-white border border-brand-ink rounded w-[calc(277*var(--k))] pt-[calc(230*var(--k))] pb-[calc(12*var(--k))] lg:w-[calc(315*var(--k))] lg:pt-[calc(358.6*var(--k))] lg:pb-[calc(27.4*var(--k))]">
       <h3 className="absolute flex gap-[calc(6*var(--k))] whitespace-nowrap uppercase tracking-[-0.02em] leading-none left-[calc(19*var(--k))] top-[calc(38*var(--k))] text-[length:calc(21*var(--k))] lg:gap-[calc(8*var(--k))] lg:left-[calc(22*var(--k))] lg:top-[calc(64*var(--k))] lg:text-[length:calc(25*var(--k))]">
         <span className="text-brand-ink">{step.lead}</span>
         <span className="text-brand-orange">{step.word}</span>
@@ -117,7 +118,7 @@ const StepCard = ({ step }) => (
         {step.art}
       </div>
 
-      <p className="absolute text-brand-ink left-[calc(20*var(--k))] top-[calc(230*var(--k))] w-[calc(225*var(--k))] text-[length:calc(15*var(--k))] leading-[calc(17*var(--k))] lg:left-[calc(22*var(--k))] lg:top-[calc(358.6*var(--k))] lg:w-[calc(262*var(--k))] lg:text-[length:calc(18*var(--k))] lg:leading-[calc(20*var(--k))]">
+      <p className="text-brand-ink ml-[calc(20*var(--k))] w-[calc(225*var(--k))] text-[length:calc(15*var(--k))] leading-[calc(17*var(--k))] lg:ml-[calc(22*var(--k))] lg:w-[calc(262*var(--k))] lg:text-[length:calc(18*var(--k))] lg:leading-[calc(20*var(--k))]">
         {step.desc}
       </p>
     </div>
@@ -128,7 +129,7 @@ const HowItWorks = () => {
   return (
     <section
       id="how-it-works"
-      className="relative bg-brand-lime-bg [--k:var(--m)] lg:[--k:var(--u)] scroll-mt-[calc(64*var(--m)_+_40*var(--k))] pt-[calc(56*var(--k))] h-[calc(1137*var(--k))] lg:scroll-mt-[calc(76px_+_40*var(--k))] lg:pt-[calc(92*var(--k))] lg:h-[calc(770*var(--k))]"
+      className="relative bg-brand-lime-bg [--k:var(--m)] lg:[--k:var(--u)] scroll-mt-[calc(64*var(--m)_+_40*var(--k))] pt-[calc(56*var(--k))] pb-[calc(36*var(--k))] lg:scroll-mt-[calc(76px_+_40*var(--k))] lg:pt-[calc(92*var(--k))] lg:pb-[calc(98*var(--k))]"
     >
       {/* "OUR PROCESS" label, overlapping the top edge of the section */}
       <span
@@ -143,7 +144,7 @@ const HowItWorks = () => {
         How it works
       </h2>
 
-      <ol className="flex flex-col items-center list-none m-0 p-0 gap-[calc(16*var(--k))] mt-[calc(17*var(--k))] lg:flex-row lg:items-start lg:justify-start lg:pl-[calc(152*var(--k))] lg:gap-0 lg:mt-[calc(45*var(--k))]">
+      <ol className="flex flex-col items-center list-none m-0 p-0 gap-[calc(16*var(--k))] mt-[calc(17*var(--k))] lg:flex-row lg:items-stretch lg:justify-start lg:pl-[calc(152*var(--k))] lg:gap-0 lg:mt-[calc(45*var(--k))]">
         {STEPS.map((step) => (
           <StepCard key={step.num} step={step} />
         ))}

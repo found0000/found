@@ -58,7 +58,7 @@ const Navbar = () => {
               className="h-[calc(36*var(--m))] px-[calc(12*var(--m))] text-[length:calc(12*var(--m))] tracking-[-0.01em] lg:w-[150px] lg:h-[38px] lg:px-0 lg:text-[14px] lg:tracking-[-0.02em]"
               onClick={() => handleScroll('waitlist-form')}
             >
-              JOIN WAITLIST
+              JOIN THE WAITLIST
             </Button>
 
             {/* Mobile menu toggle */}
