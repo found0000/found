@@ -8,7 +8,7 @@ import paperBall from '../assets/icons/paper-ball.png';
  * The track is rendered twice and shifted by -50% (animate-marquee) so it loops seamlessly.
  */
 const HUB = Array(8).fill('The Campus Opportunity Hub.');
-const KEYWORDS = ['Scholarships.', 'Research.', 'Competitions.', 'Volunteering.', 'Events'];
+const KEYWORDS = ['Scholarships.', 'Research.', 'Competitions.', 'Volunteering.', 'Events.'];
 
 const TONES = {
   orange: 'bg-brand-orange',
