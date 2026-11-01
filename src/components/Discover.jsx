@@ -32,8 +32,6 @@ const CardOneDesktopStickers = () => (
     <Deco box={[660.71, 223.65, 302.94, 151.37]} size={[290, 92.308]} rotate={-12.17}>
       <div className="w-full h-full flex items-center justify-center">
         <p className="opsz-28 text-center text-brand-ink leading-[1.15]" style={{ fontSize: u(19) }}>
-          <span className="font-semibold">Great Opportunities.</span>
-          <br />
           <span className="font-semibold">Zero subscription fees.</span>
           <br />
           Found is free for all students.
@@ -48,7 +46,7 @@ const CardOneDesktopStickers = () => (
         FOUND FACT
       </Button>
     </Deco>
-    <div className="absolute inset-0 pointer-events-none" style={{ transform: 'translateY(calc(var(--gd) * var(--u)))' }}>
+    <div className="absolute inset-0 pointer-events-none" style={{ transform: 'translateY(calc(var(--gb) * var(--u)))' }}>
     <Deco box={[29, 475, 214.44, 57.68]} size={[214, 56]} rotate={-0.45}>
       <Button tone="orange" onClick={scrollToWaitlist} className="opsz-28 font-medium pointer-events-auto w-full h-full tracking-[-0.02em]" style={{ borderWidth: u(2), fontSize: u(17) }}>
         JOIN THE WAITLIST
@@ -123,9 +121,10 @@ const CardOne = () => (
 
 const Discover = () => {
   return (
-    // --gm / --gd: extra height (mobile / desktop units) the longer copy needs; the button,
-    // mobile stickers and card bottom move down by this much.
-    <section className="relative bg-brand-sky" style={{ '--gm': 82, '--gd': 67 }}>
+    // --gm / --gd: extra card height (mobile / desktop units) the copy needs. On mobile the button and
+    // stickers move down by --gm; on desktop the button moves by --gb so it sits under the text, while the
+    // card keeps the height the sticker cluster on the right needs.
+    <section className="relative bg-brand-sky" style={{ '--gm': 9, '--gd': 0, '--gb': -56 }}>
       <MarqueeBanner variant="hub" tone="purple" />
       <div className="relative w-full -mt-[calc(1*var(--m))] lg:mt-0 h-[calc((575+var(--gm))*var(--m))] lg:h-[calc((746+var(--gd))*var(--u))]">
         <CardOne />

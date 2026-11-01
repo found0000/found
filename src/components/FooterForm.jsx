@@ -153,12 +153,56 @@ const TextField = ({ id, label, type = 'text', placeholder, value, onChange, req
 );
 
 // Pill-shaped outline button with a thin white border (Figma v2).
+// Round outline links to Found's social pages, shown next to "Contact us".
+const SOCIAL_LINKS = [
+  {
+    label: 'Found on Instagram',
+    href: 'https://www.instagram.com/foundcampus',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" className="w-full h-full">
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Found on LinkedIn',
+    href: 'https://www.linkedin.com/company/usefound/',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="w-full h-full">
+        <circle cx="5" cy="5" r="2.2" />
+        <rect x="3" y="9" width="4" height="12" rx="0.6" />
+        <path d="M10 9h3.8v1.7c.6-1 1.9-2 3.9-2 3.2 0 4.3 2 4.3 5.1V21h-4v-6.4c0-1.5-.3-2.8-2-2.8s-2.1 1.3-2.1 2.8V21H10z" />
+      </svg>
+    ),
+  },
+];
+
+const Connect = ({ className = '' }) => (
+  <ul className={`flex list-none m-0 p-0 gap-[calc(12*var(--k))] ${className}`} aria-label="Found on social media">
+    {SOCIAL_LINKS.map((link) => (
+      <li key={link.href}>
+        <a
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={link.label}
+          className="flex items-center justify-center rounded-full border border-white text-white transition hover:bg-white hover:text-brand-orange w-[calc(40*var(--k))] h-[calc(40*var(--k))] p-[calc(10.5*var(--k))] lg:w-[calc(47*var(--k))] lg:h-[calc(47*var(--k))] lg:p-[calc(12.5*var(--k))] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        >
+          {link.icon}
+        </a>
+      </li>
+    ))}
+  </ul>
+);
+
 const ContactButton = ({ className }) => (
   <Button
     as="a"
     href="mailto:hello@usefound.co"
     tone="outline"
-    className={`rounded-full !border font-bold tracking-[0.05em] ${className}`}
+    className={`rounded-full !border font-bold tracking-[0.05em] hover:bg-white hover:text-brand-orange hover:brightness-100 ${className}`}
   >
     CONTACT US
   </Button>
@@ -238,7 +282,11 @@ const FooterForm = () => {
           <p className="opsz-28 text-[#FAFAFA] mt-[calc(21*var(--k))] w-[calc(343*var(--k))] lg:w-[calc(469*var(--k))] text-[length:calc(18*var(--k))] leading-[calc(21*var(--k))] lg:mt-[calc(27*var(--k))] lg:text-[length:calc(22*var(--k))] lg:leading-[calc(26*var(--k))]">
             Join the waitlist for early access and be among the first to discover opportunities picked for you.
           </p>
-          <ContactButton className="mt-[calc(21*var(--k))] w-[calc(154*var(--k))] h-[calc(40*var(--k))] text-[length:calc(14*var(--k))] lg:mt-[calc(41*var(--k))] lg:w-[calc(174*var(--k))] lg:h-[calc(47*var(--k))]" />
+          {/* Contact on the left, social links on the right, spanning the paragraph's width */}
+          <div className="flex items-center justify-between mt-[calc(21*var(--k))] w-[calc(343*var(--k))] lg:mt-[calc(41*var(--k))] lg:w-[calc(469*var(--k))]">
+            <ContactButton className="w-[calc(154*var(--k))] h-[calc(40*var(--k))] text-[length:calc(14*var(--k))] lg:w-[calc(174*var(--k))] lg:h-[calc(47*var(--k))]" />
+            <Connect />
+          </div>
         </div>
 
         {/* Form */}
