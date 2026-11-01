@@ -7,11 +7,11 @@ import chevronDown from '../assets/icons/chevron-down.svg';
  * and the desktop unit (--u) from lg up.
  */
 const faqs = [
-  { question: "What is Found?", answer: "Found is a platform we're building to make it easier for college students to discover opportunities on campus. Instead of having to search through different websites, emails, and social media pages, students can find opportunities that match their interests and goals, all in one place." },
-  { question: "What kind of opportunities can I find on Found?", answer: "We're starting with campus events, research opportunities, competitions, student programs, and career development experiences like networking events. As Found grows, we'll continue adding more opportunities for students to explore." },
+  { question: "What is Found?", answer: "Found is a platform we're building to make it easier for college students to discover opportunities on campus. Instead of having to search through multiple sources, students can find opportunities that match their interests and goals, all in one place." },
+  { question: "What kind of opportunities can I find on Found?", answer: "We're starting with campus events, research opportunities, competitions, student programs, and career development experiences. As Found grows, we'll continue adding more opportunities for students to explore." },
   { question: "How is Found different from LinkedIn or Handshake?", answer: "LinkedIn and Handshake are great for finding jobs, internships, and building professional connections. Found focuses on opportunities within your campus community, including experiences that might not show up on traditional career platforms." },
-  { question: "Is Found only for Penn State students?", answer: "For now, yes! We're starting at Penn State, but our goal is to eventually bring Found to students at universities across the country." },
-  { question: "Is Found free for students?", answer: "Yes! Found is completely free for students." },
+  { question: "Is Found only for Penn State students?", answer: "For now, yes. We're starting at Penn State, but our goal is to eventually bring Found to students at universities across the country." },
+  { question: "Is Found free for students?", answer: "Yes. Found is completely free for students." },
   { question: "When is Found launching?", answer: "We're getting ready to launch at Penn State! We're still working on a few things behind the scenes, but you can join our waitlist to be the first to know when we're live." },
 ];
 
