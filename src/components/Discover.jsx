@@ -71,8 +71,6 @@ const CardOneMobileStickers = () => (
       {/* Text sits inside the note, so it shares the note's exact angle, centred both ways. */}
       <div className="absolute inset-0 flex items-center justify-center">
         <p className="text-center text-brand-ink" style={{ width: m(203), fontSize: m(14), lineHeight: 1.15 }}>
-          <span className="font-semibold">Great Opportunities.</span>
-          <br />
           <span className="font-semibold">Zero subscription fees.</span>
           <br />
           Found is free for all students.
@@ -109,14 +107,12 @@ const CardOne = () => (
     {/* Text */}
     <div className="absolute flex flex-col gap-[calc(34*var(--m))] left-[calc(20*var(--m))] right-[calc(20*var(--m))] top-[calc(64*var(--m))] lg:gap-0 lg:right-auto lg:left-[calc(32*var(--u))] lg:top-[calc(109*var(--u))] lg:w-[calc(611*var(--u))]">
       <h2 className="opsz-28 font-bold uppercase tracking-[-0.02em] text-brand-ink [text-wrap:balance] w-[calc(294*var(--m))] text-[length:calc(24*var(--m))] leading-[calc(27*var(--m))] lg:w-full lg:text-[length:calc(50*var(--u))] lg:leading-[1.2]">
-        There&rsquo;s more out there.
+        Picked for you. Not everyone.
       </h2>
       <div className="opsz-28 text-brand-ink flex flex-col gap-[calc(12*var(--m))] max-w-[calc(300*var(--m))] lg:max-w-none text-[length:calc(16*var(--m))] leading-[calc(19*var(--m))] lg:gap-[calc(16*var(--u))] lg:mt-[calc(48*var(--u))] lg:w-[calc(470*var(--u))] lg:text-[length:calc(22*var(--u))] lg:leading-[1.15]">
         <p>
-          From campus events and competitions to programs and experiences you might never have heard about, there&rsquo;s more to
-          discover on campus than you think.
+          Your interests, your goals, your opportunities. Found helps you find what matters to you- without having to sort through everything else.
         </p>
-        <p>Found brings opportunities together in one place, so you can spend less time searching and more time exploring.</p>
       </div>
     </div>
 
