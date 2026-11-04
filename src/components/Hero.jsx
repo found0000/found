@@ -131,17 +131,17 @@ const Hero = () => {
 
         {/* Intro */}
         <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center text-center top-[calc(102*var(--m))] w-[calc(381*var(--m))] lg:top-[calc(171*var(--u))] lg:w-[calc(630*var(--u))]">
-          <h1 className="opsz-28 font-bold capitalize tracking-[-0.02em] text-brand-ink text-[length:calc(32*var(--m))] leading-[calc(33*var(--m))] lg:text-[length:calc(55*var(--u))] lg:leading-[1.02]">
+          <h1 className="opsz-28 font-bold capitalize tracking-[-0.02em] text-brand-ink text-[length:calc(32*var(--m))] leading-[1.2] lg:text-[length:calc(55*var(--u))] lg:leading-[1.2]">
             Discover opportunities you didn&rsquo;t know existed.
           </h1>
-          <p className="lg-opsz-28 text-brand-ink tracking-[-0.02em] mt-[calc(33*var(--m))] w-[calc(300*var(--m))] text-[length:calc(17*var(--m))] leading-[calc(17*var(--m))] lg:mt-[calc(54*var(--u))] lg:w-[calc(381*var(--u))] lg:text-[length:calc(22*var(--u))] lg:leading-[1.045] lg:tracking-normal">
+          <p className="lg-opsz-28 text-brand-ink tracking-[-0.02em] mt-[calc(26*var(--m))] w-[calc(300*var(--m))] text-[length:calc(17*var(--m))] leading-[1.5] lg:mt-[calc(44*var(--u))] lg:w-[calc(381*var(--u))] lg:text-[length:calc(22*var(--u))] lg:leading-[1.5] lg:tracking-normal">
             Discover campus events, programs, experiences and more, all in one place. Found helps you find opportunities that
             match your interests and goals.
           </p>
           <Button
             tone="purple"
             onClick={scrollToWaitlist}
-            className="opsz-28 font-medium h-[calc(37*var(--m))] text-[length:calc(14*var(--m))] tracking-[-0.02em] mt-[calc(32*var(--m))] w-[calc(139*var(--m))] border-brand-purple lg:mt-[calc(42*var(--u))] lg:w-[calc(212*var(--u))] lg:h-[calc(50*var(--u))] lg:text-[length:calc(17*var(--u))]"
+            className="opsz-28 font-medium h-[calc(37*var(--m))] text-[length:calc(14*var(--m))] tracking-[-0.02em] mt-[calc(28*var(--m))] w-[calc(139*var(--m))] border-brand-purple lg:mt-[calc(37*var(--u))] lg:w-[calc(212*var(--u))] lg:h-[calc(50*var(--u))] lg:text-[length:calc(17*var(--u))]"
           >
             JOIN THE WAITLIST
           </Button>
